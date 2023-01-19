@@ -14,7 +14,6 @@ export default function Weather() {
     <div>
       <div className="Weather">
         <div className="container">
-          <div className="row">
             <div className="offset-sm-1 col-sm-10">
               <form onSubmit={handleSubmit}>
                 <div class="mb-3 location">
@@ -29,8 +28,7 @@ export default function Weather() {
                 </div>
               </form>
             </div>
-          </div>
-        </div>
+      </div>
       </div>
     </div>
   );

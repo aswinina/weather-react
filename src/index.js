@@ -12,12 +12,12 @@ root.render(
   <StrictMode>
     <div className="Weather">
       <Weather />
-      <span className="sourcecode">
+      <footer className="sourcecode">
         <a href="https://github.com/aswinina/weather-react">
-          Open-source code
+          Open-source code {" "}
         </a>
         by Aswini Sureddy
-      </span>
+      </footer>
     </div>
   </StrictMode>
 );
