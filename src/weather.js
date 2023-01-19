@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
+
 export default function Weather() {
   const [temperature, setTemperature] = useState("");
   const [description, setDescription] = useState("");
@@ -21,7 +24,7 @@ export default function Weather() {
                     placeholder="Enter location"
                     class="form-control"
                     autoComplete="off"
-                    onChange={updateCity}
+                    onChange={changeCity}
                   />
                 </div>
               </form>
