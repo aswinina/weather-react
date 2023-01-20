@@ -10,14 +10,17 @@ import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
+    
     <div className="Weather">
+    <div className="container">
       <Weather />
-      <footer className="sourcecode">
+      <footer className="sourcecode">This project coded by 
         <a href="https://github.com/aswinina/weather-react">
-          Open-source code {" "}
+          Open-source {" "}
         </a>
         by Aswini Sureddy
       </footer>
+      </div>
     </div>
   </StrictMode>
 );
