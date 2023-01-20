@@ -30,7 +30,7 @@ export default function Weather() {
     setCity(event.target.value);
   }
   return (
-    <div>
+    <div className="container">
       <h1>Weather Engine</h1>
       <form onSubmit={handleSubmit}>
         <input type="search" onChange={changeCity} />

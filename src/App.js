@@ -1,13 +1,11 @@
 import axios from "axios";
 import './App.css';
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello world</h1>
-      </header>
+      Weather App
     </div>
   );
 }
 
-export default App;
+

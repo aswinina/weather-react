@@ -6,8 +6,13 @@ body {
   background-image: url("https://scied.ucar.edu/sites/default/files/media/images/weather_0.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 100px;
-  padding: 20px;
+  
+ 
+}
+.container{
+border:2px solid rgb(137, 133, 156);
+margin-top: 10%;
+
 }
 
 h1,
@@ -19,7 +24,7 @@ h3 {
 h1 {
   text-transform: capitalize;
  font-size: 25px;
- margin-top: 150px;
+ margin-top: 50px;
 }
 
 h2 {
@@ -37,6 +42,10 @@ ul {
   font-size: 18px;
   padding-top: 20px;
 }
+li{
+  margin: 0;
+  padding: 0;
+}
 
 footer .sourcecode {
   text-decoration:none;
@@ -48,4 +57,6 @@ footer .sourcecode {
 
 form{
   text-align: center;
+
+
 }
