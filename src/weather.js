@@ -1,50 +1,42 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "./App.css";
+import "./weather.css";
 
 export default function Weather() {
-  const [temperature, setTemperature] = useState("");
-  const [description, setDescription] = useState("");
-  const [humidity, setHumidity] = useState("");
-  const [wind, setWind] = useState("");
-  const [city, setCity] = useState("");
-  const [icon, setIcon] = useState("");
-
-  function showTemperature(response) {
-    setTemperature(Math.round(response.data.main.temp));
-    setDescription(response.data.weather[0].description);
-    setHumidity(response.data.main.humidity);
-    setWind(Math.round(response.data.wind.speed));
-    setIcon(
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
-  }
-  function handleSubmit(event) {
-    event.preventDefault();
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5b74d10f3ef03caf1ac640b557c288c3&units=metric`;
-    axios.get(url).then(showTemperature);
-  }
-
-  function changeCity(event) {
-    setCity(event.target.value);
-  }
   return (
-    <div>
-      <h1>Weather App</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="search" onChange={changeCity} />
-        <input type="submit" value="Search" />
+    <div className="weather">
+      <form>
+        <div className="row mt-3">
+          <div className="col-9">
+        <input type="search" placeholder="Enter a City..."  className="from-control" autoFocus="on" />
+        </div>
+        <div className="col-3">
+        <input type="submit" value="Search" className="btn btn-primary w-100" />
+        </div>
+        </div>
       </form>
+      <h1>New York</h1>
       <ul>
-        <li>Temperature: {temperature}°C</li>
-        <li>Description: {description}</li>
-        <li>Humidity: {humidity}%</li>
-        <li>Wind: {wind} km/h</li>
-        <li>
-          <img src={icon} alt="main-icon" />
-        </li>
+        <li>Wednesday 07:00</li>
+        <li>Mostly Cloudy</li>
       </ul>
+      <div className="row">
+        <div className="col-6">
+          <div className="clearfix">
+          <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Mostly Cloudy" className="float-left"/>
+          <div className="float-left">
+          <span className="temperature"> 6</span>
+          <span className="unit"> ºc </span>
+          </div>
+          </div>
+        </div>
+        <div className="col-6"> <ul>
+        <li>Description:</li>
+        <li>Humidity:%</li>
+        <li>Wind:km/h</li>
+      </ul></div>
+      </div>
+      
     </div>
   );
 }

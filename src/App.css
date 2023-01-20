@@ -5,53 +5,13 @@ body {
   font-family: "Questrial", sans-serif;
   background-image: url("https://scied.ucar.edu/sites/default/files/media/images/weather_0.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  
- 
 }
 
-h1,
-h2,
-h3 {
-  display: block;
-  text-align:center;
+.App{
+  max-width: 600px;
+  margin:30px auto;
 }
-h1 {
-  text-transform: capitalize;
- font-size: 25px;
- margin-top: 50px;
-}
-
-h2 {
-  font-size: 60px;
-  font-weight: bold;
-}
-h3 {
-  font-size: 15px;
-}
-
-ul {
-  list-style: none;
-  text-align: center;
-  line-height: none;
-  font-size: 18px;
-  padding-top: 20px;
-}
-li{
-  margin: 0;
-  padding: 0;
-}
-
-footer .sourcecode {
-  text-decoration:none;
-  font-size:16px;
-}
-  .sourcecode  {
-    text-align:center;
-  }
-
-form{
-  text-align: center;
-
-
+.App footer{
+  font-size:11px;
+  margin:10px 0 ;
 }
