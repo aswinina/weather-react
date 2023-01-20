@@ -10,28 +10,6 @@ export default function Weather() {
   const [wind, setWind] = useState("");
   const [city, setCity] = useState("");
   const [icon, setIcon] = useState("");
-  let form = (
-    <div>
-      <div className="Weather">
-        <div className="container">
-            <div className="offset-sm-1 col-sm-10">
-              <form onSubmit={handleSubmit}>
-                <div class="mb-3 location">
-                  <label for="exampleInputEmail1" class="form-label"></label>
-                  <input
-                    type="text"
-                    placeholder="Enter location"
-                    class="form-control"
-                    autoComplete="off"
-                    onChange={changeCity}
-                  />
-                </div>
-              </form>
-            </div>
-      </div>
-      </div>
-    </div>
-  );
 
   function showTemperature(response) {
     setTemperature(Math.round(response.data.main.temp));
@@ -64,7 +42,7 @@ export default function Weather() {
         <li>Humidity: {humidity}%</li>
         <li>Wind: {wind} km/h</li>
         <li>
-          <img src={icon} />
+          <img src={icon} alt="main-icon" />
         </li>
       </ul>
     </div>
