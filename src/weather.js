@@ -7,12 +7,16 @@ export default function Weather(props) {
   
   const[weatherData,setWeatherData]= useState({ready:false});
   function handleResponse(response){
+    console.log(response.data);
     setWeatherData({
       ready:true,
+      city:response.data.city,
+      humidity:response.data.temperature.humidity,
+      description:response.data.condition.description,
       temperature:response.data.temperature.current,
       date:"Wednesday 07:00",
     wind:response.data.wind.speed,
-  description:response.data.condition.description,
+ 
 iconUrl:"http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"});
   }
   if(weatherData.ready){
