@@ -15,7 +15,7 @@ export default function Weather(props) {
       humidity:response.data.temperature.humidity,
       description:response.data.condition.description,
       temperature:response.data.temperature.current,
-      date:new Date(response.data.dt * 1000),
+      date: new Date(response.data.time * 1000),
     wind:response.data.wind.speed,
  
 iconUrl:"http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"});
@@ -29,7 +29,7 @@ iconUrl:"http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clo
           <input type="search" placeholder="Enter a City..."  className="from-control" autoFocus="on" />
           </div>
           <div className="col-3">
-          <input type="submit" value="Search" className="btn btn-primary w-100" />
+          <input type="submit" value="Search" className="btn btn-primary btn-sm w-100" />
           </div>
           </div>
         </form>
@@ -48,7 +48,7 @@ iconUrl:"http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clo
             </div>
             </div>
           </div>
-          <div className="col-6"> <ul>
+          <div className="col-6 speed"> <ul>
           <li>Humidity:{weatherData.humidity}%</li>
           <li>Wind:{weatherData.wind}km/h</li>
         </ul></div>
