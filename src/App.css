@@ -3,7 +3,6 @@ html{
 }
 body {
   font-family: "Questrial", sans-serif;
-  background-image: url("");
   background-size: cover;
 }
 
@@ -12,6 +11,6 @@ body {
   margin:30px auto;
 }
 .App footer{
-  font-size:11px;
+  font-size:13px;
   margin:10px 0 ;
 }
