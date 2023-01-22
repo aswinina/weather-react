@@ -17,8 +17,8 @@ export default function Weather(props) {
       description:response.data.condition.description,
       temperature:response.data.temperature.current,
       date: new Date(response.data.time * 1000),
-    wind:response.data.wind.speed,
-icon: response.data.condition.icon});
+      wind:response.data.wind.speed,
+      icon: response.data.condition.icon});
   }
   function search(){
     const apikey = "3d249bt9daobf40e979808326e2bf43a";
