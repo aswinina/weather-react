@@ -18,8 +18,7 @@ export default function Weather(props) {
       temperature:response.data.temperature.current,
       date: new Date(response.data.time * 1000),
     wind:response.data.wind.speed,
- 
-iconUrl:"http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"});
+icon: response.data.condition.icon});
   }
   function search(){
     const apikey = "3d249bt9daobf40e979808326e2bf43a";
