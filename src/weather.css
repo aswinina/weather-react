@@ -6,6 +6,7 @@
     margin-top: 200px;
     border-radius: 4px;
     background-image: url("../image/backendimage.jpg");
+  
   }
   .weather h1{
     font-size: 24px;
@@ -23,24 +24,22 @@ font-size: 16px;
 font-weight: 100;
 line-height: 19px;
 list-style: none;
+margin-right: 5px;
   }
   .weather canvas{
-    height: 90px;
-    width: 75px;
-    margin-right: 10px;
-    margin-top: 5px;
-    display: inline-block;
+   margin: 10px auto;
   }
 
   .weather .temperature{
     font-weight: bold;
-    color: rgb(33,33,33);
-    line-height: 100px;
+    color: rgb(36, 35, 35);
+    line-height: 73px;
     font-size: 64px;
     font-weight: 400;
+    margin-left: 10px;
   }
   .weather .unit{ 
-    color: rgb(33,33,33);
+    color: rgb(55, 54, 54);
     font-size: 16px;
     font-weight: 400;
     position: relative;

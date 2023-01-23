@@ -3,6 +3,7 @@ import axios from "axios";
 import WeatherInfo from "./weatherInfo";
 import "bootstrap/dist/css/bootstrap.css";
 import "./weather.css";
+import WeatherForecast from "./weatherForecast";
 
 export default function Weather(props) {
   const[city,setCity]= useState(props.defaultCity);
@@ -12,6 +13,7 @@ export default function Weather(props) {
     
     setWeatherData({
       ready:true,
+      coordinates:response.data.coordinates,
       city:response.data.city,
       humidity:response.data.temperature.humidity,
       description:response.data.condition.description,
@@ -46,6 +48,7 @@ setCity(event.target.value);
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
        </div>
     );
   } else{
