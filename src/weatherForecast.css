@@ -5,3 +5,7 @@
     opacity: 0.6;
     margin-left: 5px;
 }
+.WeatherForecast-day{
+    color:rgb(242, 244, 247);
+    margin-top: 20px;
+}
